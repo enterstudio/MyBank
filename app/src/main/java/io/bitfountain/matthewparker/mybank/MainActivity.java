@@ -21,6 +21,9 @@ public class MainActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        amountDisplay = (TextView)findViewById(R.id.balance_display);
+        amountDisplay.setText("Hello World!");
     }
 
 
