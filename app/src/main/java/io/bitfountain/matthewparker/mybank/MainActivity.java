@@ -35,6 +35,14 @@ public class MainActivity extends Activity {
                 amountDisplay.setText(amount);
             }
         });
+
+        depositButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String amount = amountInput.getText().toString();
+                amountDisplay.setText(amount);
+            }
+        });
     }
 
 
