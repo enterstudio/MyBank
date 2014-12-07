@@ -23,7 +23,9 @@ public class MainActivity extends Activity {
         setContentView(R.layout.activity_main);
 
         amountDisplay = (TextView)findViewById(R.id.balance_display);
-        amountDisplay.setText("Hello World!");
+        withdrawButton = (Button)findViewById(R.id.withdraw_button);
+        depositButton = (Button)findViewById(R.id.deposit_button);
+        amountInput = (EditText)findViewById(R.id.amount_input);
     }
 
 
