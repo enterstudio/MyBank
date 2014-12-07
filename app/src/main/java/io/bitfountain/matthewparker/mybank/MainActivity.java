@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -26,6 +27,14 @@ public class MainActivity extends Activity {
         withdrawButton = (Button)findViewById(R.id.withdraw_button);
         depositButton = (Button)findViewById(R.id.deposit_button);
         amountInput = (EditText)findViewById(R.id.amount_input);
+
+        withdrawButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String amount = amountInput.getText().toString();
+                amountDisplay.setText(amount);
+            }
+        });
     }
 
 
