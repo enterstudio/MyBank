@@ -13,6 +13,8 @@ import android.widget.TextView;
 
 public class MainActivity extends Activity {
 
+    private static final String TAG = "MainActivity";
+
     EditText amountInput;
     Button withdrawButton;
     Button depositButton;
