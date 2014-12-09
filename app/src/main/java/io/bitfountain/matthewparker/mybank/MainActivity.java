@@ -29,7 +29,7 @@ public class MainActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        mCurrentAccount = new BankAccount(BankAccount.Type.SAVINGS);
+        mCurrentAccount = new CheckingAccount();
 
         mAmountDisplay = (TextView)findViewById(R.id.balance_display);
         mWithdrawButton = (Button)findViewById(R.id.withdraw_button);

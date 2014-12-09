@@ -5,28 +5,16 @@ import java.util.ArrayList;
 /**
  * Created by matthewparker on 12/7/14.
  */
-public class BankAccount {
+public abstract class BankAccount {
     private static final String TAG = "BankAccount";
     private ArrayList<Double> mTransactions;
     public static final double OVERDRAFT_FEE = 30;
 
-    public enum Type{
-        CHECKING, SAVINGS;
-    }
-
-    private Type mType;
-
-    BankAccount(Type accountType){
+    BankAccount(){
         mTransactions = new ArrayList<Double>();
-        mType = accountType;
     }
 
     public void withdraw(double amount){
-        if (mType == Type.SAVINGS){
-            if (numberOfWithdrawals() >= 3){
-                return;
-            }
-        }
         mTransactions.add(-amount);
 
         if(getBalance() < 0){
