@@ -10,8 +10,15 @@ public class BankAccount {
     private ArrayList<Double> mTransactions;
     public static final double OVERDRAFT_FEE = 30;
 
-    BankAccount(){
+    public enum Type{
+        CHECKING, SAVINGS;
+    }
+
+    private Type mType;
+
+    BankAccount(Type accountType){
         mTransactions = new ArrayList<Double>();
+        mType = accountType;
     }
 
     public void withdraw(double amount){
