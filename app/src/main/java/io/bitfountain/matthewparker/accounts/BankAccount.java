@@ -1,4 +1,4 @@
-package io.bitfountain.matthewparker.mybank;
+package io.bitfountain.matthewparker.accounts;
 
 import java.util.ArrayList;
 
@@ -10,7 +10,7 @@ public abstract class BankAccount {
     private ArrayList<Double> mTransactions;
     public static final double OVERDRAFT_FEE = 30;
 
-    BankAccount(){
+    protected BankAccount(){
         mTransactions = new ArrayList<Double>();
     }
 
@@ -22,7 +22,7 @@ public abstract class BankAccount {
         }
     }
 
-    public int numberOfWithdrawals(){
+    protected int numberOfWithdrawals(){
         int count = 0;
         for (int i = 0; i < mTransactions.size(); i++) {
             if (mTransactions.get(i) < 0){

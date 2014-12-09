@@ -1,11 +1,11 @@
-package io.bitfountain.matthewparker.mybank;
+package io.bitfountain.matthewparker.accounts;
 
-import android.util.Log;
+import io.bitfountain.matthewparker.accounts.BankAccount;
 
 /**
  * Created by matthewparker on 12/9/14.
  */
-public class SavingsAccount extends BankAccount{
+public class SavingsAccount extends BankAccount {
     private static final String TAG = "SavingsAccount";
     @Override
     public void withdraw(double amount) {

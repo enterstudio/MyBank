@@ -2,7 +2,6 @@ package io.bitfountain.matthewparker.mybank;
 
 import android.app.Activity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -10,7 +9,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
-import java.util.ArrayList;
+import io.bitfountain.matthewparker.accounts.BankAccount;
+import io.bitfountain.matthewparker.accounts.SavingsAccount;
 
 
 public class MainActivity extends Activity {
